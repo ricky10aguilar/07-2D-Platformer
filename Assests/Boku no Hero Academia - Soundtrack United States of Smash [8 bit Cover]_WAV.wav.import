@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Boku no Hero Academia - Soundtrack United States of Smash [8 bit Cover]_WAV.wav-bc9e1b3ad709fc5dcae8834770204e09.sample"
+
+[deps]
+
+source_file="res://Assests/Boku no Hero Academia - Soundtrack United States of Smash [8 bit Cover]_WAV.wav"
+dest_files=[ "res://.import/Boku no Hero Academia - Soundtrack United States of Smash [8 bit Cover]_WAV.wav-bc9e1b3ad709fc5dcae8834770204e09.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

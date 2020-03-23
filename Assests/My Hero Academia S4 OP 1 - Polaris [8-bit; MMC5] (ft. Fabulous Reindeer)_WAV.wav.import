@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/My Hero Academia S4 OP 1 - Polaris [8-bit; MMC5] (ft. Fabulous Reindeer)_WAV.wav-99d93a10e6fd049e66bc7cc96619bfa6.sample"
+
+[deps]
+
+source_file="res://Assests/My Hero Academia S4 OP 1 - Polaris [8-bit; MMC5] (ft. Fabulous Reindeer)_WAV.wav"
+dest_files=[ "res://.import/My Hero Academia S4 OP 1 - Polaris [8-bit; MMC5] (ft. Fabulous Reindeer)_WAV.wav-99d93a10e6fd049e66bc7cc96619bfa6.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

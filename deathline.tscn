@@ -1,0 +1,26 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Scenes/PlayerData.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scripts/deathline.gd" type="Script" id=3]
+
+[sub_resource type="Gradient" id=2]
+
+[sub_resource type="GradientTexture" id=3]
+gradient = SubResource( 2 )
+
+[sub_resource type="SegmentShape2D" id=1]
+a = Vector2( 4198.9, -41.9619 )
+b = Vector2( -1312.15, -35.4707 )
+
+[node name="Area2D" type="Area2D"]
+script = ExtResource( 3 )
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = SubResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 372.523, 564.189 )
+shape = SubResource( 1 )
+
+[node name="PlayerData" parent="." instance=ExtResource( 2 )]
+[connection signal="body_entered" from="." to="." method="_on_Area2D_body_entered"]

@@ -1,0 +1,52 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Scenes/UserInterface.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/PlayerData.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/Title.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/QuitButton.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/SceneChangeButton.tscn" type="PackedScene" id=5]
+
+[node name="UserInterface" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Score" type="Label" parent="."]
+margin_left = 490.0
+margin_top = 26.0
+margin_right = 640.0
+margin_bottom = 40.0
+text = "Score: %s"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PauseOverlay" type="ColorRect" parent="."]
+visible = false
+margin_right = 640.0
+margin_bottom = 360.0
+color = Color( 1, 1, 1, 0 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Title" parent="PauseOverlay" instance=ExtResource( 3 )]
+
+[node name="PauseMenu" type="VBoxContainer" parent="PauseOverlay"]
+margin_left = 70.0
+margin_right = 110.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MainScreenButton" parent="PauseOverlay/PauseMenu" instance=ExtResource( 5 )]
+margin_right = 58.0
+next_scene_path = "res://MainScreen.tscn"
+
+[node name="Button" parent="PauseOverlay/PauseMenu" instance=ExtResource( 4 )]
+
+[node name="PlayerData" parent="." instance=ExtResource( 2 )]

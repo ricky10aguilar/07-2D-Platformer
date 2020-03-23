@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/My Hero Academia Opening 1  - The Day [8-bit; 2A03]_WAV.wav-2303ea287cb36dd4a2a68339d0fe7090.sample"
+
+[deps]
+
+source_file="res://Assests/My Hero Academia Opening 1  - The Day [8-bit; 2A03]_WAV.wav"
+dest_files=[ "res://.import/My Hero Academia Opening 1  - The Day [8-bit; 2A03]_WAV.wav-2303ea287cb36dd4a2a68339d0fe7090.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

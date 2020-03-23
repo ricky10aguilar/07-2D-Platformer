@@ -1,0 +1,140 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://Font/DIN Alternate Bold copy.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Scenes/QuitButton.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/Title.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/SceneChangeButton.tscn" type="PackedScene" id=4]
+[ext_resource path="res://wow.tres" type="Gradient" id=5]
+[ext_resource path="res://Assests/My Hero Academia S4 OP 1 - Polaris [8-bit; MMC5] (ft. Fabulous Reindeer)_WAV.wav" type="AudioStream" id=6]
+
+[sub_resource type="GradientTexture" id=2]
+gradient = ExtResource( 5 )
+
+[sub_resource type="Animation" id=3]
+resource_name = "New Anim"
+length = 10.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -267.792, 0 ), Vector2( -210, 0 ), Vector2( -175, 0 ), Vector2( -140, 0 ), Vector2( -105, 0 ), Vector2( -70, 0 ), Vector2( 0, 0 ), Vector2( -70, 0 ), Vector2( -105, 0 ), Vector2( -175, 0 ), Vector2( -267.792, -10.6822 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:rect_rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ]
+}
+
+[sub_resource type="DynamicFont" id=4]
+font_data = ExtResource( 1 )
+
+[sub_resource type="Theme" id=5]
+default_font = SubResource( 4 )
+
+[sub_resource type="StyleBoxFlat" id=6]
+bg_color = Color( 0.0666667, 0.431373, 0.811765, 1 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color( 0.188235, 0.176471, 0.176471, 1 )
+border_blend = true
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+corner_detail = 16
+shadow_color = Color( 0.027451, 0.0196078, 0.0196078, 0.6 )
+shadow_offset = Vector2( 4, 0 )
+
+[sub_resource type="StyleBoxFlat" id=7]
+bg_color = Color( 0.717647, 0.0901961, 0.0352941, 1 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color( 0.188235, 0.176471, 0.176471, 1 )
+border_blend = true
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+corner_detail = 16
+shadow_color = Color( 0.027451, 0.0196078, 0.0196078, 0.6 )
+shadow_offset = Vector2( 4, 0 )
+
+[node name="MainScreen" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_left = -267.792
+margin_top = -10.6822
+margin_right = 642.208
+margin_bottom = 514.318
+texture = SubResource( 2 )
+expand = true
+flip_h = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="TextureRect"]
+autoplay = "New Anim"
+"anims/New Anim" = SubResource( 3 )
+
+[node name="Label" parent="." instance=ExtResource( 3 )]
+text = "Pedal to the Medal"
+
+[node name="Menu" type="VBoxContainer" parent="."]
+margin_left = 245.0
+margin_top = 175.0
+margin_right = 385.0
+margin_bottom = 225.0
+alignment = 1
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="SceneChange" parent="Menu" instance=ExtResource( 4 )]
+modulate = Color( 0.886275, 0.886275, 0.886275, 1 )
+margin_right = 140.0
+margin_bottom = 26.0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+theme = SubResource( 5 )
+custom_styles/hover = SubResource( 6 )
+custom_colors/font_color_disabled = Color( 0.4, 0.0392157, 0.0392157, 1 )
+text = "Play"
+next_scene_path = "res://Scenes/Game.tscn"
+
+[node name="Button" parent="Menu" instance=ExtResource( 2 )]
+modulate = Color( 0.886275, 0.886275, 0.886275, 1 )
+margin_top = 30.0
+margin_right = 140.0
+margin_bottom = 56.0
+theme = SubResource( 5 )
+custom_styles/hover = SubResource( 7 )
+custom_colors/font_color_disabled = Color( 0.4, 0.0392157, 0.0392157, 1 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 6 )
+autoplay = true
